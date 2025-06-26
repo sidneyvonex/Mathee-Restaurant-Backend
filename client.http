@@ -1,0 +1,71 @@
+//default route
+
+###
+GET http://localhost:5000/
+
+//Users Route
+
+###
+GET http://localhost:5000/api/users
+Authorization : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImVtYWlsIjoiZGVuaXNAZXhhbXBsZS5jb20iLCJmdWxsTmFtZSI6IkRlbmlzIiwidXNlclR5cGUiOiJhZG1pbiIsImV4cCI6MTc0ODQ0MDkwNCwiaWF0IjoxNzQ4NDM3MzA0fQ.46gRM9w65ZXyJ6T2rDrCJKfCmNuy0rMN3TmnBJUg2HI
+###
+GET http://localhost:5000/api/users
+
+###
+POST http://localhost:5000/api/auth/register
+content-type: application/json
+
+{
+  "fullName": "Denis",
+  "email": "wachira.denis@teach2give.com",
+  "password": "password3"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+content-type: application/json
+
+{
+  "email": "admin@mail.com",
+  "password": "admin" 
+}
+
+###
+PUT http://localhost:5000/api/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImVtYWlsIjoiZGVuaXNAZXhhbXBsZS5jb20iLCJmdWxsTmFtZSI6IkRlbmlzIiwidXNlclR5cGUiOiJhZG1pbiIsImV4cCI6MTc0ODQ0MDkwNCwiaWF0IjoxNzQ4NDM3MzA0fQ.46gRM9w65ZXyJ6T2rDrCJKfCmNuy0rMN3TmnBJUg2HI
+content-type: application/json
+
+{
+"fullName": "John Updted",
+  "email": "john@example.com",
+  "password": "password3" 
+}
+
+
+###
+DELETE  http://localhost:5000/api/users/3
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjgsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhZG1pbiIsImxhc3ROYW1lIjoibWFpbiIsInVzZXJUeXBlIjoiYWRtaW4iLCJleHAiOjE3NTA4NDE0NDQsImlhdCI6MTc1MDgzNzg0NH0.Uar_yfLEjJq_IeFsbP5O9nfM7RpUY_54FMRhb_Iombg
+
+//State route
+###
+GET http://localhost:5000/api/states
+
+###
+GET http://localhost:5000/api/states/3
+
+
+###
+POST http://localhost:5000/api/states
+content-type: application/json
+
+{
+  "stateName": "New State",
+  "stateCode": "NS" 
+}
+
+###
+DELETE  http://localhost:5000/api/orders/13
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjgsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhZG1pbiIsImxhc3ROYW1lIjoibWFpbiIsInVzZXJUeXBlIjoiYWRtaW4iLCJleHAiOjE3NTA4NDEzNjIsImlhdCI6MTc1MDgzNzc2Mn0.xGSsobEQhboDeJQr4fBWUXSlKp3Vx-WDeQ3-xnW2IiU
+
+###
+DELETE  http://localhost:5000/api/states/3
