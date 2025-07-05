@@ -28,7 +28,8 @@ export const getUserById = async (req: Request, res: Response) => {
         if (user == undefined) {
             res.status(404).json({ message: "User not found" });
         } else {
-            res.status(200).json(user);
+            const {password,...userWithoutPasswordPayload} =user;
+            res.status(200).json(userWithoutPasswordPayload);
         }
     } catch (error:any) {
         res.status(500).json({ error:error.message || "Failed to fetch user" });
