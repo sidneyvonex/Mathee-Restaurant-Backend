@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx watch ./src/server.ts",
     "build": "tsc",
-    "production build":"pnpm install && npm run build",
+    "productionbuild":"pnpm install && npm run build",
     "start": "node ./dist/src/server.js",
     "gen": "drizzle-kit generate",
     "migrate": " tsx src/drizzle/migrate.ts",
