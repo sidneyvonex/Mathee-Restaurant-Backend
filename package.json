@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "tsx watch ./src/server.ts",
     "build": "tsc",
+    "production build":"pnpm install && npm run build",
     "start": "node ./dist/src/server.js",
     "gen": "drizzle-kit generate",
     "migrate": " tsx src/drizzle/migrate.ts",
@@ -30,14 +31,14 @@
     "nodemailer": "^7.0.3",
     "pg": "^8.16.0",
     "rate-limiter-flexible": "^7.1.1",
-    "@types/jest": "^29.5.14"
+ 
   },
   "devDependencies": {
     "@jest/types": "30.0.0-beta.3",
     "@types/bcrypt": "^5.0.2",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.2",
-    
+    "@types/jest": "^29.5.14",
     "@types/jsonwebtoken": "^9.0.9",
     "@types/node": "^22.15.21",
     "@types/nodemailer": "^6.4.17",
